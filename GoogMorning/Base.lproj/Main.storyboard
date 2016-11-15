@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="mW6-gw-MeF">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Collection View Controller-->
+        <scene sceneID="RK2-f3-0gF">
+            <objects>
+                <collectionViewController id="9ot-t0-gkL" customClass="CollectionViewController" customModule="GoogMorning" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="TD6-4E-Eg9">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="N9b-80-s41">
+                            <size key="itemSize" width="200" height="200"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="O5p-vR-Qj8" customClass="GoodMorningViewCell" customModule="GoogMorning" customModuleProvider="target">
+                                <rect key="frame" x="88" y="0.0" width="200" height="200"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tdI-HT-AIs">
+                                            <rect key="frame" x="2" y="2" width="196" height="196"/>
+                                        </imageView>
+                                    </subviews>
+                                </view>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="tdI-HT-AIs" firstAttribute="leading" secondItem="O5p-vR-Qj8" secondAttribute="leading" constant="2" id="SSG-Dy-9td"/>
+                                    <constraint firstAttribute="bottom" secondItem="tdI-HT-AIs" secondAttribute="bottom" constant="2" id="dqS-9o-sxI"/>
+                                    <constraint firstAttribute="trailing" secondItem="tdI-HT-AIs" secondAttribute="trailing" constant="2" id="njp-qX-zs1"/>
+                                    <constraint firstItem="tdI-HT-AIs" firstAttribute="top" secondItem="O5p-vR-Qj8" secondAttribute="top" constant="2" id="suW-UD-TiY"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="imagenView" destination="tdI-HT-AIs" id="pK3-Bk-yZR"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="9ot-t0-gkL" id="BGl-5s-9cr"/>
+                            <outlet property="delegate" destination="9ot-t0-gkL" id="Qk6-6B-FSN"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" id="iXe-be-eSz"/>
+                    <connections>
+                        <segue destination="MpK-AD-NIP" kind="show" identifier="MasterToDetail" id="PFd-gW-rVN"/>
+                    </connections>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NwN-ub-YW2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1124" y="466"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="35F-ZH-RiX">
+            <objects>
+                <viewController id="MpK-AD-NIP" customClass="DetailViewController" customModule="GoogMorning" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="L2d-yM-pSr"/>
+                        <viewControllerLayoutGuide type="bottom" id="yU3-HV-ePg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Kvp-Uz-J8b">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LES-Ya-0LD">
+                                <rect key="frame" x="16" y="64" width="343" height="559"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="1xE-0F-vJq">
+                                <rect key="frame" x="8" y="309.5" width="359" height="50"/>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="32"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="LES-Ya-0LD" secondAttribute="trailing" id="7To-eg-MfF"/>
+                            <constraint firstAttribute="centerX" secondItem="1xE-0F-vJq" secondAttribute="centerX" id="BxX-DK-3SU"/>
+                            <constraint firstItem="1xE-0F-vJq" firstAttribute="top" secondItem="L2d-yM-pSr" secondAttribute="bottom" constant="8" id="FlH-xy-iUi"/>
+                            <constraint firstAttribute="trailing" secondItem="1xE-0F-vJq" secondAttribute="trailing" constant="8" id="JLU-L7-sUJ"/>
+                            <constraint firstItem="1xE-0F-vJq" firstAttribute="leading" secondItem="Kvp-Uz-J8b" secondAttribute="leading" constant="8" id="KgI-Oa-dw5"/>
+                            <constraint firstItem="LES-Ya-0LD" firstAttribute="leading" secondItem="Kvp-Uz-J8b" secondAttribute="leadingMargin" id="QhV-FE-crJ"/>
+                            <constraint firstItem="yU3-HV-ePg" firstAttribute="top" secondItem="LES-Ya-0LD" secondAttribute="bottom" id="VIb-ZV-Qbv"/>
+                            <constraint firstAttribute="centerY" secondItem="1xE-0F-vJq" secondAttribute="centerY" constant="-1" id="fbH-8X-bVC"/>
+                            <constraint firstItem="LES-Ya-0LD" firstAttribute="top" secondItem="L2d-yM-pSr" secondAttribute="bottom" id="gp3-CN-Yf7"/>
+                            <constraint firstItem="yU3-HV-ePg" firstAttribute="top" secondItem="1xE-0F-vJq" secondAttribute="bottom" constant="8" id="rXG-Ac-3c1"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="FlH-xy-iUi"/>
+                                <exclude reference="rXG-Ac-3c1"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <toolbarItems>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="Kxj-3u-ZM8"/>
+                        <barButtonItem systemItem="action" id="A0o-ea-Mqv">
+                            <connections>
+                                <action selector="compartirRedesSociales:" destination="MpK-AD-NIP" id="2jZ-pv-C09"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="tlK-y8-cMB"/>
+                    </toolbarItems>
+                    <connections>
+                        <outlet property="btnCompartir" destination="A0o-ea-Mqv" id="FJn-2r-XbY"/>
+                        <outlet property="frase" destination="1xE-0F-vJq" id="vVT-Nc-N58"/>
+                        <outlet property="viewFotoBuenosDias" destination="LES-Ya-0LD" id="a68-oa-uhz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9O6-xB-DeS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1833" y="466"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="34f-yi-hMk">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" toolbarHidden="NO" id="mW6-gw-MeF" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="odZ-H3-YXb">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="ElY-nx-V59">
+                        <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
+                    <connections>
+                        <segue destination="9ot-t0-gkL" kind="relationship" relationship="rootViewController" id="sDJ-rz-nnn"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="l3q-kw-yfk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="441" y="466"/>
+        </scene>
+    </scenes>
+</document>
