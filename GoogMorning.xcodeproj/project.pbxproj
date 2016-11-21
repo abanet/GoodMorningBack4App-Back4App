@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C01855F61DE30E9700EE347B /* GATracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01855F51DE30E9700EE347B /* GATracker.swift */; };
 		C07F1E571D08641600B164F4 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C07F1E511D08641600B164F4 /* Bolts.framework */; };
 		C07F1E581D08641600B164F4 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C07F1E521D08641600B164F4 /* Parse.framework */; };
 		C07F1E591D08641600B164F4 /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C07F1E531D08641600B164F4 /* ParseFacebookUtils.framework */; };
@@ -52,6 +53,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C01855F51DE30E9700EE347B /* GATracker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GATracker.swift; sourceTree = "<group>"; };
 		C07F1E511D08641600B164F4 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		C07F1E521D08641600B164F4 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		C07F1E531D08641600B164F4 /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtils.framework; sourceTree = "<group>"; };
@@ -81,7 +83,7 @@
 		D37D8A021AA1162200A1D76B /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		D3834F931A879120005D1C19 /* GoogMorning.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoogMorning.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3834F971A879120005D1C19 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D3834F981A879120005D1C19 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D3834F981A879120005D1C19 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = GoogMorning/AppDelegate.swift; sourceTree = "<group>"; };
 		D3834F9D1A879120005D1C19 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D3834F9F1A879120005D1C19 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		D3834FA81A879120005D1C19 /* GoogMorningTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GoogMorningTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -130,6 +132,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C01855F71DE30E9B00EE347B /* Estadisticas */ = {
+			isa = PBXGroup;
+			children = (
+				C01855F51DE30E9700EE347B /* GATracker.swift */,
+			);
+			name = Estadisticas;
+			sourceTree = "<group>";
+		};
 		C0B2B0C71ADBC20D0068FC52 /* Whatsapp */ = {
 			isa = PBXGroup;
 			children = (
@@ -169,6 +179,8 @@
 		D3834F8A1A87911F005D1C19 = {
 			isa = PBXGroup;
 			children = (
+				D3834F981A879120005D1C19 /* AppDelegate.swift */,
+				C01855F71DE30E9B00EE347B /* Estadisticas */,
 				D37B1C841A879AB3006D39B0 /* Frameworks */,
 				D3834F951A879120005D1C19 /* GoogMorning */,
 				D3834FAB1A879120005D1C19 /* GoogMorningTests */,
@@ -192,7 +204,6 @@
 				C0B2B0C71ADBC20D0068FC52 /* Whatsapp */,
 				D3E62FAF1A9F93BA00F6B3B6 /* ParseFotos.swift */,
 				D3095BBE1ABCBAEE00FA7A39 /* ParseFrases.swift */,
-				D3834F981A879120005D1C19 /* AppDelegate.swift */,
 				D37B1CA61A879CF8006D39B0 /* BridgeObjectiveSwift.m */,
 				D3834F9C1A879120005D1C19 /* Main.storyboard */,
 				D37D8A021AA1162200A1D76B /* DetailViewController.swift */,
@@ -343,6 +354,7 @@
 				D37D8A011AA1009300A1D76B /* GoodMorningViewCell.swift in Sources */,
 				C0B2B0CA1ADBC3360068FC52 /* MMMWhatsAppActivity.m in Sources */,
 				D37D8A031AA1162200A1D76B /* DetailViewController.swift in Sources */,
+				C01855F61DE30E9700EE347B /* GATracker.swift in Sources */,
 				D37B1CA71A879CF8006D39B0 /* BridgeObjectiveSwift.m in Sources */,
 				D3834F991A879120005D1C19 /* AppDelegate.swift in Sources */,
 			);

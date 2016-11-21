@@ -12,5 +12,5 @@ class GoodMorningViewCell: UICollectionViewCell {
     
     
     @IBOutlet var imagenView: UIImageView!
-    var index: IndexPath?
+    var index: IndexPath? // Para controlar si la imagen que cargamos es la correcta.
 }

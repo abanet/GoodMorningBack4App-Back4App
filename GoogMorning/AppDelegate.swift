@@ -16,11 +16,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
+    
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
+        // Antigua conexión a Parse.
         //Parse.setApplicationId("YxgHuxeJi1HyGluuqtYTLS06qJz9HtgxOA3NMkdE", clientKey: "iO2C4xOdfaQX3t2BvSfMW9dJMl7gpas8iTpZgpfz")
-      
-      let configuration = ParseClientConfiguration {
+        
+        // Activamos estadísticas
+        GATracker.setup(tid: "UA-87793211-1") // id de GA para GoodMorning (cuenta alberto.banet)
+        GATracker.sharedInstance.screenView(screenName: "Sesiones Abiertas GoodMorning", customParameters: nil)
+        
+        let configuration = ParseClientConfiguration {
         $0.applicationId = "YxgHuxeJi1HyGluuqtYTLS06qJz9HtgxOA3NMkdE"
         $0.clientKey = "iO2C4xOdfaQX3t2BvSfMW9dJMl7gpas8iTpZgpfz"
         $0.server = "https://parseapi.back4app.com"
