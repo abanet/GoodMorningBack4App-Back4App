@@ -26,12 +26,17 @@ class CollectionViewController: UICollectionViewController, protocoloParseFotos 
         // Ponemos el título
         self.navigationItem.title = NSLocalizedString("Elige cómo dar los buenos días!", comment: "Título del navigation controller en el collection view controller.")
         
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
+        
+        // 22-11-2016 
+        // Carga de las fotos se ha movido del viewWillAppear. Sólo se cargan una vez al entrar en la app.
         parseFotos = ParseFotos()
         parseFotos.delegate = self
         self.objetosFotos = parseFotos.arrayFotos
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        // ocultar el toolbar del navigacionController.
+        self.navigationController?.setToolbarHidden(true, animated: true)
     }
     
     override func numberOfSections(in collectionView: UICollectionView) -> Int {

@@ -35,6 +35,9 @@ class DetailViewController: UIViewController, protocoloParseFrases {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
+        // Mostrar barra de herramientas para poder compartir.
+        self.navigationController?.setToolbarHidden(false, animated: true)
+        
         self.btnCompartir.isEnabled = false
         self.frase.alpha = 0
         self.viewFotoBuenosDias.alpha = 0
