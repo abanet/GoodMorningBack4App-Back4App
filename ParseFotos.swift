@@ -42,6 +42,7 @@ class ParseFotos {
         }
         query.whereKey("visible", equalTo:true)
         query.cachePolicy = .networkElseCache
+        query.order(byDescending: "updatedAt")
         query.findObjectsInBackground {
             (objects:[PFObject]?, error:Error?)-> Void in
             
